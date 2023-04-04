@@ -72,7 +72,7 @@ export default function Services() {
                     <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>3rd Place: Internship ( Junior Frontend Developer) + Certificate with goodies</li>
                     <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>4th place: 5000 Rs + Certificate with goodies</li>
                     <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>5th-10th Place: Certificate with goodies</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>In addition to the cash prizes and goodies, winners will receive recognition on our social media channels</li>
+                    <li style={{paddingLeft: '10px'}}>In addition to the cash prizes and goodies, winners will receive recognition on our social media channels</li>
                   </ul>
                 </p>
                 {/* <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
@@ -96,7 +96,7 @@ export default function Services() {
                     <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Code quality and organization</li>
                     <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Integration and effective use of the core technologies (Three.js, Next.js, and React Native)</li>
                     <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Responsiveness and compatibility across different devices and platforms</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Thoroughness of the README file and documentation</li>
+                    <li style={{paddingLeft: '10px'}}>Thoroughness of the README file and documentation</li>
                   </ul>
                   
                   
