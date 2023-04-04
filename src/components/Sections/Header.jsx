@@ -11,11 +11,12 @@ import { FlipDate } from "./CountdownTimer";
 import Dots from "../../assets/svg/Dots";
 
 export default function Header() {
+  const endTime = new Date("2023-05-31T23:59:59.999Z");
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter" style={{color: "white"}}>
         <div>
-          <h1 className="extraBold font60">CodeMonGo</h1>
+          <h1 className="extraBold font60" style={{fontFamily: 'Orbitron, sans-serif'}}>CodeMonGo</h1>
           <HeaderP className="font13 semiBold">
           Welcome to the Ultimate Frontend Battle: CodeMonGo! This exciting online coding contest is designed to challenge the skills and creativity of front-end developers who are proficient in Three.js, Next.js, and React Native.
 Are you ready to put your talent to the test and compete against fellow developers from around the world? Get ready to showcase your expertise and develop cutting-edge applications that will leave a lasting impression on the tech community!
@@ -23,8 +24,9 @@ Are you ready to put your talent to the test and compete against fellow develope
           <p className="font30">
                Are you ready to take on the challenge? 
           </p>
-          <h1>
-            <FlipDate value={"1"} />
+          <h1 className="timer">
+            <FlipDate value={"2023-05-31T23:59:59.999Z"} />
+            {/* <FlipDate endTime={endTime} /> */}
           </h1>
 
           {/* <CountdownTimer targetDate="2023-05-01T00:00:00Z"/> */}

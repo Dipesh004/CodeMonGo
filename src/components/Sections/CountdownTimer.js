@@ -1,3 +1,67 @@
+// import React, { useRef, useEffect, useState } from "react";
+// import Tick from "@pqina/flip";
+// import "@pqina/flip/dist/flip.min.css";
+// import styled from "styled-components";
+
+// export const FlipDate = ({ endTime }) => {
+//   const divRef = useRef();
+//   const tickRef = useRef();
+//   const [tickValue, setTickValue] = useState({});
+
+//   useEffect(() => {
+//     const didInit = tick => {
+//       tickRef.current = tick;
+//     };
+
+//     const currDiv = divRef.current;
+//     const tickValue = tickRef.current;
+//     Tick.DOM.create(currDiv, {
+//       value: tickValue,
+//       didInit
+//     });
+
+//     return () => Tick.DOM.destroy(tickValue);
+//   }, []);
+
+//   useEffect(() => {
+//     const timeDuration = endTime - new Date();
+
+//     if (timeDuration <= 0) {
+//       Tick.DOM.destroy(tickRef.current);
+//       return;
+//     }
+
+//     const deadline = new Date(new Date().getTime() + timeDuration);
+
+//     const counter = Tick.count.down(deadline, {
+//       format: ["d", "h", "m", "s"],
+//       leadingZero: true
+//     });
+
+//     counter.onupdate = function(value) {
+//       setTickValue(value);
+//     };
+
+//     return () => {
+//       counter.timer.stop();
+//     };
+//   }, [endTime]);
+
+//   useEffect(() => {
+//     if (tickRef.current) {
+//       tickRef.current.value = tickValue;
+//     }
+//   }, [tickValue]);
+
+//   return (
+//     <div ref={divRef} className="tick">
+//       <div data-repeat="true">
+//         <span data-view="flip" />
+//       </div>
+//     </div>
+//   );
+// };
+
 import React, { useRef, useEffect, useState } from "react";
 import Tick from "@pqina/flip";
 import "@pqina/flip/dist/flip.min.css";
@@ -6,7 +70,10 @@ import styled from 'styled-components';
 export const FlipDate = ({ value }) => {
   const divRef = useRef();
   const tickRef = useRef();
-  const [tickValue, setTickValue] = useState(value);
+  const [tickValue, setTickValue] = useState(+new Date(value) - +new Date());
+  console.log("working");
+  console.log(value);
+  console.log(+new Date(value) - +new Date());
 
   useEffect(() => {
     const didInit = tick => {

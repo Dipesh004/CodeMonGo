@@ -65,14 +65,15 @@ export default function Services() {
               <AddLeft>
                 {/* <h4 className="font15 semiBold">A few words about company</h4> */}
                 <h2 className="font40 extraBold">Prizes:</h2>
-                <p className="font16">
-                  1st Place: Job Offer (Frontend Developer) + Certificate + wireless keyboard and mouse
-                  2nd Place: Internship (Frontend Developer) + Certificate + wireless mouse
-                  3rd Place: Internship ( Junior Frontend Developer) + Certificate with goodies
-                  4th place: 5000 Rs + Certificate with goodies
-                  5th-10th Place: Certificate with goodies
-                  In addition to the cash prizes and goodies, winners will receive recognition on our social media channels
-                  Are you ready to take on the challenge? Sharpen your coding skills, let your creativity run wild, and join the Ultimate Frontend Battle: Three.js, Next.js, and React Native
+                <p className="font18">
+                  <ul>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>1st Place: Job Offer (Frontend Developer) + Certificate + wireless keyboard and mouse</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>2nd Place: Internship (Frontend Developer) + Certificate + wireless mouse</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>3rd Place: Internship ( Junior Frontend Developer) + Certificate with goodies</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>4th place: 5000 Rs + Certificate with goodies</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>5th-10th Place: Certificate with goodies</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>In addition to the cash prizes and goodies, winners will receive recognition on our social media channels</li>
+                  </ul>
                 </p>
                 {/* <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
                   <div style={{ width: "190px" }}>
@@ -86,15 +87,25 @@ export default function Services() {
               <AddRight>
                 {/* <AddRightInner> */}
                 <h2 className="font40 extraBold">Judging Criteria:</h2>
-                <p>
-                  Submissions will be evaluated based on the following criteria:
-                  Innovation and creativity
-                  Design and user experience
-                  Functionality and performance
-                  Code quality and organization
-                  Integration and effective use of the core technologies (Three.js, Next.js, and React Native)
-                  Responsiveness and compatibility across different devices and platforms
-                  Thoroughness of the README file and documentation
+                <p className="font18">
+                  <ul>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Submissions will be evaluated based on the following criteria:</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Innovation and creativity</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Design and user experience</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Functionality and performance</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Code quality and organization</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Integration and effective use of the core technologies (Three.js, Next.js, and React Native)</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Responsiveness and compatibility across different devices and platforms</li>
+                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Thoroughness of the README file and documentation</li>
+                  </ul>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
                 </p>
                   {/* <div className="flexNullCenter">
                     <AddImgWrapp1 className="flexCenter">

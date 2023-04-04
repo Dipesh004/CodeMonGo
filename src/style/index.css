@@ -65,6 +65,9 @@
     padding: 0px 30px;
   }
   @media only screen and (max-width: 859px) {
+    .timer{
+      font-size: 40px !important;
+    }
     .container {
       padding: 0 15px;
     }
@@ -178,7 +181,15 @@
     font-size: 3.75rem;
     line-height: 4.5rem;
   }
+  @media only screen and (max-width: 321px){
+    .timer{
+      font-size: 30px !important;
+    }
+  }
   @media only screen and (max-width: 859px) {
+    .timer{
+      font-size: 50px;
+    }
     .font11 {
       font-size: 0.688rem;
     }
@@ -293,4 +304,7 @@
     border: 2px solid #fff;
     color: #fff;
     background-color: transparent;
+  }
+  .timer{
+    font-size: 60px;
   }
