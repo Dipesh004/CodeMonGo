@@ -17,11 +17,16 @@ export default function Header() {
         <div>
           <h1 className="extraBold font60">CodeMonGo</h1>
           <HeaderP className="font13 semiBold">
-          In this coding competition, participants will be tasked with developing a fully functional application that incorporates the power of Three.js for 3D graphics, the efficiency of Next.js for server-rendered React applications, and the adaptability of React Native for cross-platform app development. The contest will focus on innovation, design, functionality, and overall user experience.
+          Welcome to the Ultimate Frontend Battle: CodeMonGo! This exciting online coding contest is designed to challenge the skills and creativity of front-end developers who are proficient in Three.js, Next.js, and React Native.
+Are you ready to put your talent to the test and compete against fellow developers from around the world? Get ready to showcase your expertise and develop cutting-edge applications that will leave a lasting impression on the tech community!
           </HeaderP>
+          <p className="font30">
+               Are you ready to take on the challenge? 
+          </p>
           <h1>
             <FlipDate value={"1"} />
           </h1>
+
           {/* <CountdownTimer targetDate="2023-05-01T00:00:00Z"/> */}
           {/* <BtnWrapper>
             <FullButton title="Get Started"/>

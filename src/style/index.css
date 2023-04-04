@@ -258,7 +258,8 @@
     background-color: #F2B300;
   }
   .lightBg {
-    background-color: #F5F5F5;
+    background-color: #Fff;
+    color: #205295;
   }
   .coralBg {
     background-color: #C4FFFF;
@@ -281,6 +282,15 @@
   .services{
     /* background-color: #205295 !important; */
     /* color: white !important;  */
-    background-color: white;
-    color: #205295;
+    /* background-color: #2C74B3; */
+    color: #ffff;
+    padding-bottom: 0 !important;
+  }
+  .jXLclz{
+    padding-top: 0 !important;
+  }
+  .outline-border{
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
   }

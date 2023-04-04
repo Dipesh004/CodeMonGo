@@ -29,7 +29,7 @@ export default function ServiceBox({icon, title, subtitle}) {
 
 
   return (
-    <Wrapper className="flex flexColumn">
+    <Wrapper className="flex flexColumn outline-border" style={{height: "380px", padding:"15px",borderRadius:"15px"}}>
       <IconStyle>{getIcon}</IconStyle>
       <TitleStyle className="font20 extraBold">{title}</TitleStyle>
       <SubtitleStyle className="font13">{subtitle}</SubtitleStyle>

@@ -30,44 +30,56 @@ export default function TestimonialSlider() {
   };
   return (
     <div>
-      <Slider {...settings}>
-        <LogoWrapper className="flexCenter">
+      {/* <Slider {...settings}>
+        {/* <LogoWrapper className="flexCenter">
           <TestimonialBox
             text="Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it."
             author="Ralph Waldo Emerson"
           />
-        </LogoWrapper>
-        <LogoWrapper className="flexCenter">
+        </LogoWrapper> */}
+        {/* <LogoWrapper className="flexCenter">
           <TestimonialBox
             text="Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it."
             author="Ralph Waldo Emerson"
           />
-        </LogoWrapper>
-        <LogoWrapper className="flexCenter">
+        </LogoWrapper> */}
+        {/* <LogoWrapper className="flexCenter">
           <TestimonialBox
             text="Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it."
             author="Ralph Waldo Emerson"
           />
-        </LogoWrapper>
-        <LogoWrapper className="flexCenter">
+        </LogoWrapper> */}
+        {/* <LogoWrapper className="flexCenter">
           <TestimonialBox
             text="Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it."
             author="Ralph Waldo Emerson"
           />
-        </LogoWrapper>
-        <LogoWrapper className="flexCenter">
+        </LogoWrapper> */}
+        {/* <LogoWrapper className="flexCenter">
           <TestimonialBox
             text="Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it."
             author="Ralph Waldo Emerson"
           />
-        </LogoWrapper>
-        <LogoWrapper className="flexCenter">
+        </LogoWrapper> */}
+        {/* <LogoWrapper className="flexCenter">
           <TestimonialBox
             text="Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it."
             author="Ralph Waldo Emerson"
           />
-        </LogoWrapper>
-      </Slider>
+        </LogoWrapper> */}
+      {/* </Slider> */}
+      <TestimonialBox
+      text1="1. The application must be built using Three.js, Next.js, and React Native."
+      text2="2. The submission should include a web version built with Next.js and a mobile version built with React Native."
+      text3="3. The application should showcase an innovative use of 3D graphics using Three.js."
+      text4="4. Contestants must provide a clear and concise README file outlining the features and functionality of their application, as well as setup and installation instructions."
+      text5="5. All submitted projects must be open-source and hosted on a public GitHub or GitLab repository."
+      text6="6. Participants are encouraged to use additional libraries and tools to enhance their projects, provided that they are compatible with the core technologies (Three.js, Next.js, and React Native)."
+      text7="7. All submissions must be original work and not violate any copyright or intellectual property rights."
+      text8="8. Collaborative submissions are allowed, but teams must not exceed four members."
+      text9="9.The contest will run for 2 days, starting from the date of the official announcement."
+      // author="Ralph Waldo Emerson"
+    />
     </div>
   );
 }
