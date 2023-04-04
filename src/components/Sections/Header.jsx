@@ -4,28 +4,34 @@ import styled from "styled-components";
 import FullButton from "../Buttons/FullButton";
 // Assets
 import HeaderImage from "../../assets/img/header-img.png";
-import QuotesIcon from "../../assets/svg/Quotes";
+import CountdownTimer from "./CountdownTimer";
+import { FlipDate } from "./CountdownTimer";
+// import FlipDate from "./CountdownTimer";
+// import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
 export default function Header() {
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
-      <LeftSide className="flexCenter">
+      <LeftSide className="flexCenter" style={{color: "white"}}>
         <div>
-          <h1 className="extraBold font60">We are Digital Agency.</h1>
+          <h1 className="extraBold font60">CodeMonGo</h1>
           <HeaderP className="font13 semiBold">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          In this coding competition, participants will be tasked with developing a fully functional application that incorporates the power of Three.js for 3D graphics, the efficiency of Next.js for server-rendered React applications, and the adaptability of React Native for cross-platform app development. The contest will focus on innovation, design, functionality, and overall user experience.
           </HeaderP>
-          <BtnWrapper>
-            <FullButton title="Get Started" />
-          </BtnWrapper>
+          <h1>
+            <FlipDate value={"1"} />
+          </h1>
+          {/* <CountdownTimer targetDate="2023-05-01T00:00:00Z"/> */}
+          {/* <BtnWrapper>
+            <FullButton title="Get Started"/>
+          </BtnWrapper> */}
         </div>
       </LeftSide>
       <RightSide>
         <ImageWrapper>
           <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
-          <QuoteWrapper className="flexCenter darkBg radius8">
+          {/* <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
             </QuotesWrapper>
@@ -35,12 +41,12 @@ export default function Header() {
               </p>
               <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
             </div>
-          </QuoteWrapper>
+          </QuoteWrapper> */}
           <DotsWrapper>
             <Dots />
           </DotsWrapper>
         </ImageWrapper>
-        <GreyDiv className="lightBg"></GreyDiv>
+        {/* <GreyDiv className="lightBg"></GreyDiv> */}
       </RightSide>
     </Wrapper>
   );

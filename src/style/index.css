@@ -50,7 +50,8 @@
     -webkit-text-fill-color: #fff;
   }
   body {
-    background: #fff;
+    /* background: #fff; */
+    background-color: #2C74B3;
     color: #0B093B;
     font-family: 'Khula', sans-serif;
     overflow-x: hidden;
@@ -246,7 +247,9 @@
   }
   /* BACKGROUNDS */
   .darkBg {
-    background-color: #0B093B;
+    /* background-color: #0B093B; */
+    background-color: #2C74B3;
+
   }
   .purpleBg {
     background-color: #7620FF;
@@ -267,5 +270,17 @@
     background-color: #707070;
   }
   .whiteBg {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #2C74B3;
+  }
+  .nav-btn{
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+  }
+  .services{
+    /* background-color: #205295 !important; */
+    /* color: white !important;  */
+    background-color: white;
+    color: #205295;
   }

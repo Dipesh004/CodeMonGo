@@ -30,9 +30,9 @@ export default function TopNavbar() {
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <LogoIcon />
-            <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
+            {/* <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
               fanatic
-            </h1>
+            </h1> */}
           </Link>
           <BurderWrapper
             className="pointer"
@@ -81,8 +81,8 @@ export default function TopNavbar() {
             <li className="semiBold font15 pointer flexCenter">
               <a
                 href="/"
-                className="radius8 lightBg"
-                style={{ padding: "10px 15px" }}
+                className="radius8 lightBg nav-btn"
+                style={{ padding: "10px 15px", backgroundColor: '#2C74B3', color: 'white',}}
               >
                 Registration
               </a>
