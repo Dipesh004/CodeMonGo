@@ -42,7 +42,7 @@ export default function ClientSlider() {
   };
   return (
     <div>
-      <Slider {...settings}>
+      {/* <Slider {...settings}>
         <LogoWrapper className="flexCenter">
           <ImgStyle src={ClientLogo01} alt="client logo" />
         </LogoWrapper>
@@ -73,7 +73,11 @@ export default function ClientSlider() {
         <LogoWrapper className="flexCenter">
           <ImgStyle src={ClientLogo02} alt="client logo" />
         </LogoWrapper>
-      </Slider>
+      </Slider> */}
+      <h1 className="flex flexCenter font30">A few words about OCPL</h1>
+      <p style={{textAlign: "center"}} className="font20">
+          At Ocpl Tech, we are a leading Blockchain Development Company dedicated to driving innovation for businesses in India and worldwide. Our talented team of experts skillfully leverages cutting-edge technology to create custom blockchain solutions and high-speed web, Android, and iOS applications. By partnering with us, you'll experience a powerful blend of dedication and advanced technology that simplifies processes and accelerates your business growth. Choose Ocpl Tech and embark on a journey toward remarkable success.
+      </p>
     </div>
   );
 }

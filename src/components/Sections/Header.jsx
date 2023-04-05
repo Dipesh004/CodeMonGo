@@ -4,28 +4,41 @@ import styled from "styled-components";
 import FullButton from "../Buttons/FullButton";
 // Assets
 import HeaderImage from "../../assets/img/header-img.png";
-import QuotesIcon from "../../assets/svg/Quotes";
+import CountdownTimer from "./CountdownTimer";
+import { FlipDate } from "./CountdownTimer";
+// import FlipDate from "./CountdownTimer";
+// import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
 export default function Header() {
+  const endTime = new Date("2023-05-31T23:59:59.999Z");
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
-      <LeftSide className="flexCenter">
+      <LeftSide className="flexCenter" style={{color: "white"}}>
         <div>
-          <h1 className="extraBold font60">We are Digital Agency.</h1>
+          <h1 className="extraBold font60" style={{fontFamily: 'Orbitron, sans-serif'}}>CodeMonGo</h1>
           <HeaderP className="font13 semiBold">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          Welcome to the Ultimate Frontend Battle: CodeMonGo! This exciting online coding contest is designed to challenge the skills and creativity of front-end developers who are proficient in Three.js, Next.js, and React Native.
+Are you ready to put your talent to the test and compete against fellow developers from around the world? Get ready to showcase your expertise and develop cutting-edge applications that will leave a lasting impression on the tech community!
           </HeaderP>
-          <BtnWrapper>
-            <FullButton title="Get Started" />
-          </BtnWrapper>
+          <p className="font30">
+               Are you ready to take on the challenge? 
+          </p>
+          <h1 className="timer">
+            <FlipDate value={"2023-05-31T23:59:59.999Z"} />
+            {/* <FlipDate endTime={endTime} /> */}
+          </h1>
+
+          {/* <CountdownTimer targetDate="2023-05-01T00:00:00Z"/> */}
+          {/* <BtnWrapper>
+            <FullButton title="Get Started"/>
+          </BtnWrapper> */}
         </div>
       </LeftSide>
       <RightSide>
         <ImageWrapper>
           <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
-          <QuoteWrapper className="flexCenter darkBg radius8">
+          {/* <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
             </QuotesWrapper>
@@ -35,12 +48,12 @@ export default function Header() {
               </p>
               <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
             </div>
-          </QuoteWrapper>
+          </QuoteWrapper> */}
           <DotsWrapper>
             <Dots />
           </DotsWrapper>
         </ImageWrapper>
-        <GreyDiv className="lightBg"></GreyDiv>
+        {/* <GreyDiv className="lightBg"></GreyDiv> */}
       </RightSide>
     </Wrapper>
   );
