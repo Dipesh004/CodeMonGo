@@ -29,7 +29,7 @@ export default function TopNavbar() {
         style={y > 100 ? { height: "60px" } : { height: "80px" }}
       >
         <NavInner className="container flexSpaceCenter">
-          <Link className="pointer flexNullCenter" to="home" smooth={true}>
+          <Link className="pointer flexNullCenter" to="/" smooth={true}>
             <LogoIcon />
             {/* <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
               fanatic
