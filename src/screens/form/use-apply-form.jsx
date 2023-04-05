@@ -5,11 +5,11 @@ import { basicDetailSchema, contactDetailsSchema } from "./utils/schema";
 import { useNavigate } from "react-router-dom";
 
 const defaultValues = {
-  name: "sss",
-  mobileNumber: 9716718378,
-  email: "test@gmail.com",
-  dob: "10/12/1997",
-  address: "11111",
+  name: "",
+  mobileNumber: null,
+  email: "",
+  dob: "",
+  address: "",
   termsAndConditions:false,
   marketingEmails:false,
 };
