@@ -2,19 +2,9 @@ import { Button } from "reactstrap";
 import "./index.scss";
 
 const NextButton = (props) => {
-  const { currentStep, onSubmit, errors } = props;
+  const { currentStep, onSubmit } = props;
   return (
-    <Button
-      className="next-button w-100"
-      onClick={() => {
-        if (!errors) {
-          onSubmit();
-          props.rotateHandler();
-        } else {
-          onSubmit();
-        }
-      }}
-    >
+    <Button className="next-button" onClick={onSubmit}>
       {currentStep === 8 ? "Submit" : "Next"}
     </Button>
   );

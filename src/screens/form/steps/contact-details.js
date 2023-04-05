@@ -1,113 +1,78 @@
-import { Fragment, useEffect, useState } from "react";
-import { useFormContext } from "react-hook-form";
-import { Col, FormFeedback, Row } from "reactstrap";
-import InputField from "../../../fields/input-field";
-import SelectField from "../../../fields/select-field";
-import RadioField from "../../../fields/radio-fields";
+import { Fragment, useCallback, useEffect } from "react";
+// import { useFormContext } from "react-hook-form";
+// import {logo} from "../assets/img/logo.png";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+
+import "sweetalert2/src/sweetalert2.scss";
+
+import useRazorpay from "react-razorpay";
+import { useNavigate } from "react-router-dom";
 // import SelectField
 
 const ContactDetails = () => {
-  const {
-    formState: { errors },
-    control
-} = useFormContext();
-  const [cities, setCities] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+  // const {
+  //   formState: { errors },
+  //   control,
+  // } = useFormContext();
+  const Razorpay = useRazorpay();
 
-  const options = {
-    method: "GET",
-    headers: { accept: "application/json" },
-  };
+  const handlePayment = useCallback(() => {
+    // const estimated_budget = Number(row.estimated_budget)
+    // const order =  createOrder(params);
+
+    const options = {
+      key: "rzp_live_iPRVnmksbVHEaY",
+      amount: 1 * 100,
+      name: "CODEMONGO - OCPL TECH",
+      description: "Frontend Contest",
+      image: "https://ocpl.tech/static/media/logo.e52fb4076e30019582f8.png", // COMPANY LOGO
+      handler: function (response) {
+        console.log("Returning now");
+        Swal.fire({
+          title:   "Payment ID" + response.razorpay_payment_id + "Payment Successful",
+          icon:'success',
+          confirmButtonText: 'Okay',
+        }).then((result) => {
+          /* Read more about isConfirmed, isDenied below */
+          if (result.isConfirmed) {
+            navigate("/");
+          } else if (result.isDenied) {
+            Swal.fire('Changes are not saved', '', 'info')
+          }
+        })
+      
+
+        console.log("Return response completed");
+      },
+      theme: {
+        color: "#15b8f3",
+      },
+    };
+
+    const rzpay = new Razorpay(options);
+    rzpay.open();
+    // eslint-disable-next-line
+  }, [Razorpay]);
 
   useEffect(() => {
-    fetch(
-      "https://api.openaq.org/v2/cities?limit=100000&offset=0&sort=asc&country=IN&order_by=city",
-      options
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        setCities(response.results);
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setIsLoading(false);
-      });
-      // eslint-disable-next-line
+
   }, []);
   return (
     <Fragment>
-      <Row>
-        <p className="fs-2 fw-bolder ">
-          <span>Fill al</span>l Block
-        </p>
-     
-        <Col lg={12}>
-          <InputField
-            control={control}
-            name="dob"
-            type="date"
-            errors={errors}
-            placeholder="Enter your Date of Birth"
-            label="Date of Birth"
-          />
-        </Col>
-        {/* <Col lg={12}>
-          <p className="fs-4 fw-bolder ">
-            <span>City</span>
-          </p>
-          <SelectField
-            control={control}
-            name="city"
-            options={cities.map((item) => ({
-              value: item.city,
-              label: item.city,
-            }))}
-            errors={errors}
-            placeholder="Enter your City"
-            isLoading={isLoading}
-          />
-        </Col>
-        <Col lg={12}>
-          <InputField
-            control={control}
-            name="pincode"
-            errors={errors}
-            placeholder="Enter your Pincode"
-            label="Pincode"
-            maxlength="6"
-          />
-        </Col>
-
-        <p className="fs-4 fw-bolder ">
-          <span>Gend</span>er
-        </p>
-        <Row>
-          <Col lg={6} xs={6}>
-            <RadioField
-              control={control}
-              name="gender"
-              id="male"
-              label="Male"
-              errors={errors}
-            />
-          </Col>
-          <Col lg={6} xs={6}s>
-            <RadioField
-              control={control}
-              name="gender"
-              id="female"
-              label="Female"
-              errors={errors}
-            />
-          </Col>
-          {errors["gender"] && (
-            <FormFeedback role="alert" className="d-block">
-              {errors["gender"].message}
-            </FormFeedback>
-          )}
-        </Row> */}
-      </Row>
+      <h3 className="fw-bold">Thank You for Submitting the Form</h3>
+      <h3>Pay the Fees to get registered for the contest</h3>
+      <p className="fs-2 fw-bolder mt-5">Registration Fees Amount: Rs. 176</p>
+      <div className="d-flex text-left align-items-center flex-column">
+        <p>Click on the Button below to pay:</p>
+        <button
+          className="btn btn-success my-2 px-5 py-2 fs-5"
+          onClick={() => handlePayment()}
+        >
+          Pay Now
+        </button>
+      </div>
+      <br />
     </Fragment>
   );
 };

@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { numberValidation, phoneNumberValidation, requireValidation } from "../../helpers/validations";
+import {  phoneNumberValidation } from "../../helpers/validations";
 
 export const basicDetailSchema = yup.object().shape({
   name: yup
@@ -7,17 +7,6 @@ export const basicDetailSchema = yup.object().shape({
     .required("Name is Required ")
     .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field "),
   mobileNumber: phoneNumberValidation({name:"Mobile Number"}).required("Mobile Number is required"),
-});
-
-export const employmentTypeSchema = yup.object().shape({
-  employmentType: yup
-    .string()
-    .required("Select one of the Employment Type is required"),
-  monthlyIncome: numberValidation ({name:"Monthly Salary"}),
-  modeofPayment: yup.string().required("Select one of these Mode of Payment"),
-});
-
-export const contactDetailsSchema = yup.object().shape({
   email: yup
     .string()
     .required("Email ID is Required")
@@ -30,10 +19,11 @@ export const contactDetailsSchema = yup.object().shape({
     cutoff.setFullYear(cutoff.getFullYear() - 18);      
     return birthdate <= cutoff;
   }),
-  city: requireValidation({ name: "City" }),
-  pincode: yup
-    .string()
-    .required("Pin Code is Required")
-    .matches(/^[1-9][0-9]{5}$/, "Enter a Valid Pincode"),
-  gender: yup.string().required("Please select your gender"),
+  address: yup.string().required("Address is Required"),
+  reason: yup.string().required("This is required Field"),
+  termsAndConditions: yup.boolean().oneOf([true], "You must accept the terms and conditions"),
+});
+
+
+export const contactDetailsSchema = yup.object().shape({
 });

@@ -3,11 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-
     "@hookform/resolvers": "^3.0.0",
-
     "@pqina/flip": "^1.7.7",
-
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -16,6 +13,7 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.43.9",
+    "react-razorpay": "^1.2.0",
     "react-router-dom": "^6.10.0",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.4",
@@ -25,6 +23,7 @@
     "sass": "^1.60.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.1",
+    "sweetalert2": "^11.7.3",
     "web-vitals": "^1.1.2",
     "yup": "^1.0.2"
   },
