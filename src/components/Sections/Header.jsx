@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import FullButton from "../Buttons/FullButton";
+// import FullButton from "../Buttons/FullButton";
 // Assets
 import HeaderImage from "../../assets/img/header-img.png";
-import CountdownTimer from "./CountdownTimer";
+// import CountdownTimer from "./CountdownTimer";
 import { FlipDate } from "./CountdownTimer";
 // import FlipDate from "./CountdownTimer";
 // import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
 export default function Header() {
-  const endTime = new Date("2023-05-31T23:59:59.999Z");
+  // const endTime = new Date("2023-05-31T23:59:59.999Z");
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter" style={{color: "white"}}>
@@ -100,23 +100,23 @@ const HeaderP = styled.div`
     max-width: 100%;
   }
 `;
-const BtnWrapper = styled.div`
-  max-width: 190px;
-  @media (max-width: 960px) {
-    margin: 0 auto;
-  }
-`;
-const GreyDiv = styled.div`
-  width: 30%;
-  height: 700px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  @media (max-width: 960px) {
-    display: none;
-  }
-`;
+// const BtnWrapper = styled.div`
+//   max-width: 190px;
+//   @media (max-width: 960px) {
+//     margin: 0 auto;
+//   }
+// `;
+// const GreyDiv = styled.div`
+//   width: 30%;
+//   height: 700px;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   z-index: 0;
+//   @media (max-width: 960px) {
+//     display: none;
+//   }
+// `;
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -133,25 +133,25 @@ const Img = styled.img`
     height: auto;
   }
 `;
-const QuoteWrapper = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 50px;
-  max-width: 330px;
-  padding: 30px;
-  z-index: 99;
-  @media (max-width: 960px) {
-    left: 20px;
-  }
-  @media (max-width: 560px) {
-    bottom: -50px;
-  }
-`;
-const QuotesWrapper = styled.div`
-  position: absolute;
-  left: -20px;
-  top: -10px;
-`;
+// const QuoteWrapper = styled.div`
+//   position: absolute;
+//   left: 0;
+//   bottom: 50px;
+//   max-width: 330px;
+//   padding: 30px;
+//   z-index: 99;
+//   @media (max-width: 960px) {
+//     left: 20px;
+//   }
+//   @media (max-width: 560px) {
+//     bottom: -50px;
+//   }
+// `;
+// const QuotesWrapper = styled.div`
+//   position: absolute;
+//   left: -20px;
+//   top: -10px;
+// `;
 const DotsWrapper = styled.div`
   position: absolute;
   right: -100px;

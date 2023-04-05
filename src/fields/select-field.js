@@ -1,9 +1,9 @@
 import React from "react";
 
 import { Controller } from "react-hook-form";
-import ReactSelect from "react-select";
 // ** Reactstrap
 import { FormFeedback, Label } from "reactstrap";
+import CreatableSelect from 'react-select/creatable';
 
 const SelectField = (props) => {
   const {
@@ -41,7 +41,7 @@ const SelectField = (props) => {
         name={name}
         control={control}
         render={({ field: { onChange, value } }) => (
-          <ReactSelect
+          <CreatableSelect
             className={`basic-single form-control ${
               errors[name] ? "is-invalid" : ""
             }`}

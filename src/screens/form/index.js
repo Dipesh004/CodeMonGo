@@ -6,7 +6,7 @@ import BasicDetails from "./steps/basic-details";
 import ContactDetails from "./steps/contact-details";
 import useApplyForm from "./use-apply-form";
 import { FormProvider } from "react-hook-form";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const LoanForm = (props) => {
   const {rotateHandler} = props;
