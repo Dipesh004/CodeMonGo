@@ -53,10 +53,11 @@
     /* background: #fff; */
     background-color: #2C74B3;
     color: #0B093B;
-    font-family: 'Khula', sans-serif;
+    /* font-family: 'Khula', sans-serif; */
     overflow-x: hidden;
     font-size: 16px;
     font-weight: 400;
+    font-family: 'Roboto', sans-serif;
   }
   .container {
     width: 100%;
@@ -181,9 +182,20 @@
     font-size: 3.75rem;
     line-height: 4.5rem;
   }
-  @media only screen and (max-width: 321px){
+  .flex-prizes{
+    align-items: start !important;
+    justify-content: center;
+    /* text-align: start !important; */
+  }
+  .align-prizes{
+    text-align: start !important;
+  }
+  @media only screen and (max-width: 391px){
     .timer{
       font-size: 30px !important;
+    }
+    .r-box{
+      height: 200px;
     }
   }
   @media only screen and (max-width: 859px) {
@@ -308,3 +320,9 @@
   .timer{
     font-size: 60px;
   }
+  .r-box{
+    height: "380px";
+    padding:"15px";
+    border-radius:"15px";
+  }
+  

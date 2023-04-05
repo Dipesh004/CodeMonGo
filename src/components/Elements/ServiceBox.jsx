@@ -29,7 +29,7 @@ export default function ServiceBox({icon, title, subtitle}) {
 
 
   return (
-    <Wrapper className="flex flexColumn outline-border" style={{height: "380px", padding:"15px",borderRadius:"15px"}}>
+    <Wrapper className="flex flexColumn outline-border r-box" >
       <IconStyle>{getIcon}</IconStyle>
       <TitleStyle className="font20 extraBold">{title}</TitleStyle>
       <SubtitleStyle className="font13">{subtitle}</SubtitleStyle>
@@ -39,6 +39,11 @@ export default function ServiceBox({icon, title, subtitle}) {
 
 const Wrapper = styled.div`
   width: 100%;
+  height: 380px; padding:15px;
+  border-radius:15px; 
+  @media (max-width: 391px) {
+    height: 250px;
+  }
 `;
 const IconStyle = styled.div`
   @media (max-width: 860px) {

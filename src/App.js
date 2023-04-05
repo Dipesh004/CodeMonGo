@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 // Screens
 import Landing from "./screens/Landing.jsx";
+import { Route, Routes } from "react-router-dom";
 
 export default function App() {
   return (
@@ -14,7 +15,10 @@ export default function App() {
           rel="stylesheet"
         />
       </Helmet>
-      <Landing />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/register" element={<Landing />} />
+      </Routes>
     </>
   );
 }

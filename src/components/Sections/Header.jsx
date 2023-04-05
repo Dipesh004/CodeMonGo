@@ -4,56 +4,38 @@ import styled from "styled-components";
 import FullButton from "../Buttons/FullButton";
 // Assets
 import HeaderImage from "../../assets/img/header-img.png";
-import CountdownTimer from "./CountdownTimer";
-import { FlipDate } from "./CountdownTimer";
-// import FlipDate from "./CountdownTimer";
 // import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+import { FlipDate } from "./CountdownTimer";
 
 export default function Header() {
-  const endTime = new Date("2023-05-31T23:59:59.999Z");
+  // const endTime = new Date("2023-05-31T23:59:59.999Z");
+  const endDate = new Date("2023-04-10T23:59:59.999Z");
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter" style={{color: "white"}}>
         <div>
           <h1 className="extraBold font60" style={{fontFamily: 'Orbitron, sans-serif'}}>CodeMonGo</h1>
-          <HeaderP className="font13 semiBold">
+          <HeaderP className="font16 " style={{maxWidth: 'auto !important'}}>
           Welcome to the Ultimate Frontend Battle: CodeMonGo! This exciting online coding contest is designed to challenge the skills and creativity of front-end developers who are proficient in Three.js, Next.js, and React Native.
-Are you ready to put your talent to the test and compete against fellow developers from around the world? Get ready to showcase your expertise and develop cutting-edge applications that will leave a lasting impression on the tech community!
+          Are you ready to put your talent to the test and compete against fellow developers from around the world? Get ready to showcase your expertise and develop cutting-edge applications that will leave a lasting impression on the tech community!
           </HeaderP>
           <p className="font30">
                Are you ready to take on the challenge? 
           </p>
           <h1 className="timer">
-            <FlipDate value={"2023-05-31T23:59:59.999Z"} />
-            {/* <FlipDate endTime={endTime} /> */}
+            <FlipDate value={"2023-06-30T11:30:00.999Z"} />
+            {/* <CountdownTimer endDate={endDate} /> */}
           </h1>
-
-          {/* <CountdownTimer targetDate="2023-05-01T00:00:00Z"/> */}
-          {/* <BtnWrapper>
-            <FullButton title="Get Started"/>
-          </BtnWrapper> */}
         </div>
       </LeftSide>
       <RightSide>
         <ImageWrapper>
           <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
-          {/* <QuoteWrapper className="flexCenter darkBg radius8">
-            <QuotesWrapper>
-              <QuotesIcon />
-            </QuotesWrapper>
-            <div>
-              <p className="font15 whiteColor">
-                <em>Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it.</em>
-              </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
-            </div>
-          </QuoteWrapper> */}
           <DotsWrapper>
             <Dots />
           </DotsWrapper>
         </ImageWrapper>
-        {/* <GreyDiv className="lightBg"></GreyDiv> */}
       </RightSide>
     </Wrapper>
   );
@@ -91,7 +73,7 @@ const RightSide = styled.div`
   }
 `;
 const HeaderP = styled.div`
-  max-width: 470px;
+ 
   padding: 15px 0 50px 0;
   line-height: 1.5rem;
   @media (max-width: 960px) {
@@ -99,24 +81,7 @@ const HeaderP = styled.div`
     text-align: center;
     max-width: 100%;
   }
-`;
-const BtnWrapper = styled.div`
-  max-width: 190px;
-  @media (max-width: 960px) {
-    margin: 0 auto;
-  }
-`;
-const GreyDiv = styled.div`
-  width: 30%;
-  height: 700px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  @media (max-width: 960px) {
-    display: none;
-  }
-`;
+`
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -132,25 +97,6 @@ const Img = styled.img`
     width: 80%;
     height: auto;
   }
-`;
-const QuoteWrapper = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 50px;
-  max-width: 330px;
-  padding: 30px;
-  z-index: 99;
-  @media (max-width: 960px) {
-    left: 20px;
-  }
-  @media (max-width: 560px) {
-    bottom: -50px;
-  }
-`;
-const QuotesWrapper = styled.div`
-  position: absolute;
-  left: -20px;
-  top: -10px;
 `;
 const DotsWrapper = styled.div`
   position: absolute;
