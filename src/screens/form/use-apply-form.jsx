@@ -1,62 +1,53 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import {
-  basicDetailSchema,
-  contactDetailsSchema,
-} from "./utils/schema";
-// import { useNavigate } from "react-router-dom";
+import { basicDetailSchema, contactDetailsSchema } from "./utils/schema";
+import { useNavigate } from "react-router-dom";
+
 const defaultValues = {
-  name: "",
-  mobileNumber: null,
-  email: "",
-  dob: "",
-  address:"",
+  name: "sss",
+  mobileNumber: 9716718378,
+  email: "test@gmail.com",
+  dob: "10/12/1997",
+  address: "11111",
+  termsAndConditions:false,
+  marketingEmails:false,
 };
 const useApplyForm = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [rotate, setRotate] = useState(false);
 
-  const validationSchema = {
-    1: basicDetailSchema,
-    2: contactDetailsSchema,
-  };
   // eslint-disable-next-line
-  const [currentStep, setCurrentStep] = useState(1);
   const methods = useForm({
     defaultValues,
-    resolver: yupResolver(validationSchema[currentStep]),
+    resolver: yupResolver(basicDetailSchema),
     mode: "onSubmit",
   });
-  // const { watch, setValue } = methods;
 
-  // const handleSteps = (action = "") => {
-  //   if (action === "prev") setCurrentStep(currentStep - 1);
-  //   else if (action === "next") setCurrentStep(currentStep + 1);
-  // };
   const rotateHandler = () => {
     setRotate(!rotate);
   };
 
-  const onSubmit = () => {
+  const onSubmit = ({ paymentId, isLastStep }) => {
     methods.handleSubmit((data) => {
-      rotateHandler()
-      console.log(data);
-      localStorage.clear();
-      // handleSteps("next");
-      if (currentStep === 8) {
-        alert("Form Submitted");
+      rotateHandler();
+      console.log({ ...data, paymentId });
+      if (isLastStep) {
+        navigate("/");
       }
+      // localStorage.clear();
+      // // handleSteps("next");
+      // if (currentStep === 8) {
+      //   alert("Form Submitted");
+      // }
     })();
   };
 
   return {
-    // handleSteps,
     methods,
-    currentStep,
     onSubmit,
     rotate,
-    rotateHandler
+    rotateHandler,
   };
 };
 export default useApplyForm;

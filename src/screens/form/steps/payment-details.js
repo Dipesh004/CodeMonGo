@@ -1,20 +1,14 @@
-import { Fragment, useCallback, useEffect } from "react";
-// import { useFormContext } from "react-hook-form";
+import { Fragment, useCallback } from "react";
 // import {logo} from "../assets/img/logo.png";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
 import "sweetalert2/src/sweetalert2.scss";
 
 import useRazorpay from "react-razorpay";
-import { useNavigate } from "react-router-dom";
 // import SelectField
 
-const ContactDetails = () => {
-  const navigate = useNavigate();
-  // const {
-  //   formState: { errors },
-  //   control,
-  // } = useFormContext();
+const PaymentDetails = (props) => {
+  const { onSubmit } = props;
   const Razorpay = useRazorpay();
 
   const handlePayment = useCallback(() => {
@@ -23,6 +17,7 @@ const ContactDetails = () => {
 
     const options = {
       key: "rzp_live_iPRVnmksbVHEaY",
+      // key: "rzp_test_u1Rc5nug9j7roz",
       amount: 1 * 100,
       name: "CODEMONGO - OCPL TECH",
       description: "Frontend Contest",
@@ -30,20 +25,19 @@ const ContactDetails = () => {
       handler: function (response) {
         console.log("Returning now");
         Swal.fire({
-          title:   "Payment ID" + response.razorpay_payment_id + "Payment Successful",
-          icon:'success',
-          confirmButtonText: 'Okay',
+          title:
+            "Payment ID" + response.razorpay_payment_id + "Payment Successful",
+          icon: "success",
+          confirmButtonText: "Okay",
         }).then((result) => {
           /* Read more about isConfirmed, isDenied below */
           if (result.isConfirmed) {
-            navigate("/");
-          } else if (result.isDenied) {
-            Swal.fire('Changes are not saved', '', 'info')
+            onSubmit({
+              paymentId: response.razorpay_payment_id,
+              isLastStep: true,
+            });
           }
-        })
-      
-
-        console.log("Return response completed");
+        });
       },
       theme: {
         color: "#15b8f3",
@@ -51,13 +45,11 @@ const ContactDetails = () => {
     };
 
     const rzpay = new Razorpay(options);
+
     rzpay.open();
     // eslint-disable-next-line
   }, [Razorpay]);
 
-  useEffect(() => {
-
-  }, []);
   return (
     <Fragment>
       <h3 className="fw-bold">Thank You for Submitting the Form</h3>
@@ -76,4 +68,4 @@ const ContactDetails = () => {
     </Fragment>
   );
 };
-export default ContactDetails;
+export default PaymentDetails;

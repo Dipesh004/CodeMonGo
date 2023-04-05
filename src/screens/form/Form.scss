@@ -22,14 +22,15 @@
 }
 .card {
   margin: 0 auto;
-  height: 80vh;
+  max-height: 80vh;
   width: 800px;
   max-width: 80%;
   position: relative;
   border-radius: 25px;
   transition: all 1s ease;
   transform-style: preserve-3d;
-  box-shadow: 1px 3px 3px rgba(0,0,0,0.2)
+  box-shadow: 1px 3px 3px rgba(0,0,0,0.2);
+  border:none;
 }
 
 .rotated {
@@ -65,6 +66,7 @@
 }
 .card-depth {
   padding: 20px;
+  text-align: center;
   //  transform: translateZ(100px) scale(0.98);
 
 }

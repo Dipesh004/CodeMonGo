@@ -4,16 +4,18 @@ import { Col, Row } from "reactstrap";
 import "./index.scss";
 import InputField from "../../../fields/input-field";
 import SelectField from "../../../fields/select-field";
+import CheckboxField from "../../../fields/checkbox-field";
 
 const BasicDetails = () => {
-  const [marketingEmails, setMarketingEmails] = useState(false);
   const {
     formState: { errors },
-    control
-} = useFormContext();
+    control,
+  } = useFormContext();
   return (
     <Fragment>
-      <p className="fs-2 fw-bolder ms-4 mb-4 text-center">Fill <span>all de</span>tails</p>  
+      <p className="fs-2 fw-bolder ms-4 mb-4 text-center">
+        Fill <span>all de</span>tails
+      </p>
       <Row>
         <Col lg={6}>
           <InputField
@@ -22,7 +24,6 @@ const BasicDetails = () => {
             errors={errors}
             placeholder="Enter your Full Name"
             label="Name"
-         
           />
         </Col>
         <Col lg={6}>
@@ -64,14 +65,13 @@ const BasicDetails = () => {
             label="Date of Birth"
           />
         </Col>
-      
+
         <Col lg={12}>
-        <p className="fs-5 fw-bold text-left">
+          <p className="fs-5 fw-bold text-left">
             Why Do you want to <span>Apply?</span>
-          
           </p>
-         
-        <SelectField
+
+          <SelectField
             control={control}
             name="reason"
             options={[
@@ -82,31 +82,29 @@ const BasicDetails = () => {
             errors={errors}
             placeholder="Reason to Apply"
           />
-           <small className="text-danger text-left">If none of these please feel free to create your option by typing!</small>
+          <small className="text-danger text-left">
+            If none of these please feel free to create your option by typing!
+          </small>
         </Col>
         <Col lg={12}>
           <div className="d-flex align-items-center">
-          <InputField
-           control={control}
-           name="termsAndConditions"
-           type="checkbox"
-           errors={errors}
-          />
-      <label htmlFor="termsAndConditions" className="ms-2 mb-3 mt-1 ">I accept the terms and conditions</label>
-      </div>
+            <CheckboxField
+              control={control}
+              name="termsAndConditions"
+              label="I accept the terms and conditions"
+              errors={errors}
+            />
+          </div>
         </Col>
         <Col lg={12}>
           <div className="d-flex align-items-center">
-          <InputField
-           control={control}
-           name="marketingEmails"
-           type="checkbox"
-           checked={marketingEmails}
-           errors={errors}
-           onChange={(e) => setMarketingEmails(e.target.checked)}
-          />
-      <label htmlFor="marketingEmails" className="ms-2 mb-3 mt-1 ">I want to receive marketing emails</label>
-      </div>
+            <CheckboxField
+              control={control}
+              name="marketingEmails"
+              label="I want to receive marketing emails"
+              errors={errors}
+            />
+          </div>
         </Col>
       </Row>
     </Fragment>
