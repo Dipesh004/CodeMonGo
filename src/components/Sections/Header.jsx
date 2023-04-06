@@ -16,16 +16,25 @@ export default function Header() {
   const endDate = new Date("2023-04-10T23:59:59.999Z");
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
-      <LeftSide className="flexCenter" style={{color: "white"}}>
+      <LeftSide className="flexCenter" style={{ color: "white" }}>
         <div>
-          <h1 className="extraBold font60" style={{fontFamily: 'Orbitron, sans-serif'}}>CodeMonGo</h1>
-          <HeaderP className="font16 " style={{maxWidth: 'auto !important'}}>
-          Welcome to the Ultimate Frontend Battle: CodeMonGo! This exciting online coding contest is designed to challenge the skills and creativity of front-end developers who are proficient in Three.js, Next.js, and React Native.
-          Are you ready to put your talent to the test and compete against fellow developers from around the world? Get ready to showcase your expertise and develop cutting-edge applications that will leave a lasting impression on the tech community!
+          <h1
+            className="extraBold font60"
+            style={{ fontFamily: "Orbitron, sans-serif" }}
+          >
+            CodeMonGo
+          </h1>
+          <HeaderP className="font16 " style={{ maxWidth: "auto !important" }}>
+            Welcome to the Ultimate Frontend Battle: CodeMonGo! This exciting
+            online coding contest is designed to challenge the skills and
+            creativity of front-end developers who are proficient in Three.js,
+            Next.js, and React Native. Are you ready to put your talent to the
+            test and compete against fellow developers from around the world?
+            Get ready to showcase your expertise and develop cutting-edge
+            applications that will leave a lasting impression on the tech
+            community!
           </HeaderP>
-          <p className="font30">
-               Are you ready to take on the challenge? 
-          </p>
+          <p className="font30">Are you ready to take on the challenge?</p>
           <h1 className="timer">
             <FlipDate value={"2023-06-30T11:30:00.999Z"} />
             {/* <CountdownTimer endDate={endDate} /> */}
@@ -34,7 +43,15 @@ export default function Header() {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+          <Img
+            className="radius8"
+            src={HeaderImage}
+            alt="office"
+            style={{
+              zIndex: 9,
+              boxShadow: "rgb(29, 29, 29, 40%) 0px 0px 16px",
+            }}
+          />
           <DotsWrapper>
             <Dots />
           </DotsWrapper>
@@ -43,7 +60,6 @@ export default function Header() {
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.section`
   padding-top: 80px;
@@ -76,7 +92,6 @@ const RightSide = styled.div`
   }
 `;
 const HeaderP = styled.div`
- 
   padding: 15px 0 50px 0;
   line-height: 1.5rem;
   @media (max-width: 960px) {
@@ -84,7 +99,7 @@ const HeaderP = styled.div`
     text-align: center;
     max-width: 100%;
   }
-`
+`;
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -113,5 +128,3 @@ const DotsWrapper = styled.div`
     display: none;
   }
 `;
-
-
