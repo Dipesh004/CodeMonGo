@@ -14,7 +14,6 @@ const PaymentDetails = (props) => {
   const handlePayment = useCallback(() => {
     // const estimated_budget = Number(row.estimated_budget)
     // const order =  createOrder(params);
-
     const options = {
       key: "rzp_live_iPRVnmksbVHEaY",
       // key: "rzp_test_u1Rc5nug9j7roz",

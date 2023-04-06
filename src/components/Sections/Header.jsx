@@ -9,6 +9,7 @@ import { FlipDate } from "./CountdownTimer";
 // import FlipDate from "./CountdownTimer";
 // import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+import { Link } from "react-router-dom";
 // import { FlipDate } from "./CountdownTimer";
 
 export default function Header() {
@@ -35,6 +36,17 @@ export default function Header() {
             community!
           </HeaderP>
           <p className="font30">Are you ready to take on the challenge?</p>
+          <div className="flexNullCenter">
+            <li className="semiBold font15 pointer flexCenter">
+              <Link
+                to="/registration-form"
+                className="radius8 lightBg nav-btn"
+                style={{ padding: "10px 15px", backgroundColor: '#2C74B3', color: 'white', width :"400px", margin: "20px 0", textAlign: "center"}}
+              >
+                Registration
+              </Link>
+            </li>
+          </div>
           <h1 className="timer">
             <FlipDate value={"2023-06-30T11:30:00.999Z"} />
             {/* <CountdownTimer endDate={endDate} /> */}

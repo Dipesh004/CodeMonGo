@@ -38,7 +38,7 @@ export default function TopNavbar() {
           >
             <BurgerIcon />
           </BurderWrapper>
-          <UlWrapperRight className="flexNullCenter">
+          {/* <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer flexCenter">
               <Link
                 to="/registration-form"
@@ -48,7 +48,7 @@ export default function TopNavbar() {
                 Registration
               </Link>
             </li>
-          </UlWrapperRight>
+          </UlWrapperRight> */}
         </NavInner>
       </Wrapper>
     </>

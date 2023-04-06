@@ -35,6 +35,7 @@ const useApplyForm = () => {
       let obj={
         ...data,paymentId
       }
+      console.log(obj);
       if (isLastStep) {
         fetch("http://91.203.132.23/register", {
           method: "POST",
