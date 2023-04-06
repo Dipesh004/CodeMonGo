@@ -1,0 +1,30 @@
+.step-number{
+    color: #0b093b;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+    @media (max-width:992px) {
+        font-size: 13px;
+        margin-top: 30px;
+    }
+}
+.form{
+    padding:30px 0px;
+    position: relative;
+    height: 100%;
+@media (max-width:992px) {
+    height: 84%;
+}
+}
+
+.next-button{
+    background-color:#0b093b;
+    border-radius: 10px;
+    // height: 50px;
+    font-size:20px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding: 10px 3 0px;
+   
+}
+

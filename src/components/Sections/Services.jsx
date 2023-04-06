@@ -3,12 +3,7 @@ import styled from "styled-components";
 // Components
 import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
-import FullButton from "../Buttons/FullButton";
-// Assets
-import AddImage1 from "../../assets/img/add/1.png";
-import AddImage2 from "../../assets/img/add/2.png";
-import AddImage3 from "../../assets/img/add/3.png";
-import AddImage4 from "../../assets/img/add/4.png";
+import '../../style/index.css'
 
 export default function Services() {
   return (
@@ -22,109 +17,72 @@ export default function Services() {
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Recruitment Process</h1>
-            {/* <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p> */}
           </HeaderInfo>
-          <ServiceBoxRow className="flex">
+          <ServiceBoxRow className="flex" >
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="roller"
+                icon="vacancy"
                 title="Evaluation"
                 subtitle="After the contest is over, the submissions will be monitored carefully based on the evaluation criteria established. Our team of technical experts in the specified technologies will be analyzing the submissions to ensure fairness and accuracy."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="monitor"
+                icon="top"
                 title="Top performers"
                 subtitle="Based on the evaluation, top performers who demonstrated exceptional skills and creativity in using three.js, Next.js, and React Native will be invited for the technical+HR round to discuss their projects, their skills, and their interest in working for your organization."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="browser"
+                icon="hire"
                 title="Technical+HR Round"
                 subtitle="During the interview, the technical skills of the candidates will be monitored by asking questions related to the technologies used in the contest along with other skills to evaluate the cultural fit of the candidates to ensure they align with your organization's values, vision, and work culture."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox 
-                icon="printer" 
+                icon="offer" 
                 title="Job offers" 
                 subtitle="Based on the evaluation, job offers will be extended to the candidates who meet our criteria and are a good fit for our organization." 
               />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div>
-        <div className="lightBg">
+        <div className="lightBg" style={{paddingLeft: '5%'}}>
           <div className="container">
-            <Advertising className="flexSpaceCenter">
+            <Advertising className="flexSpaceCenter flex-prizes ">
               <AddLeft>
-                {/* <h4 className="font15 semiBold">A few words about company</h4> */}
-                <h2 className="font40 extraBold">Prizes:</h2>
-                <p className="font18">
+                <h2 className="font40 extraBold align-prizes">Prizes:</h2>
+                <p className="font18 align-prizes" style={{marginTop: "20px"}}>
                   <ul>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>1st Place: Job Offer (Frontend Developer) + Certificate + wireless keyboard and mouse</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>2nd Place: Internship (Frontend Developer) + Certificate + wireless mouse</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>3rd Place: Internship ( Junior Frontend Developer) + Certificate with goodies</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>4th place: 5000 Rs + Certificate with goodies</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>5th-10th Place: Certificate with goodies</li>
-                    <li style={{paddingLeft: '10px'}}>In addition to the cash prizes and goodies, winners will receive recognition on our social media channels</li>
+                    <li style={{paddingBottom: '10px' }}>1st Place: Job Offer (Frontend Developer) + Certificate + wireless keyboard and mouse.</li>
+                    <li style={{paddingBottom: '10px' }}>2nd Place: Internship (Frontend Developer) + Certificate + wireless mouse.</li>
+                    <li style={{paddingBottom: '10px' }}>3rd Place: Internship ( Junior Frontend Developer) + Certificate with goodies.</li>
+                    <li style={{paddingBottom: '10px' }}>4th place: 5000 Rs + Certificate with goodies.</li>
+                    <li style={{paddingBottom: '10px' }}>5th-10th Place: Certificate with goodies.</li>
+                    <li>In addition to the cash prizes and goodies, winners will receive recognition on our social media channels.</li>
                   </ul>
                 </p>
-                {/* <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
-                  <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")} />
-                  </div>
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
-                  </div>
-                </ButtonsRow> */}
               </AddLeft>
-              <AddRight>
-                {/* <AddRightInner> */}
-                <h2 className="font40 extraBold">Judging Criteria:</h2>
-                <p className="font18">
+              {/* <div style={{paddingTop: "10px"}}> */}
+              <AddLeft>
+                <h2 className="font40 extraBold align-prizes">Judging Criteria:</h2>
+                <p className="font18 align-prizes" style={{marginTop: "20px"}}>
+                <p>Submissions will be evaluated based on the following criteria:</p>
                   <ul>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Submissions will be evaluated based on the following criteria:</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Innovation and creativity</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Design and user experience</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Functionality and performance</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Code quality and organization</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Integration and effective use of the core technologies (Three.js, Next.js, and React Native)</li>
-                    <li style={{paddingBottom: '10px' ,paddingLeft: '10px'}}>Responsiveness and compatibility across different devices and platforms</li>
-                    <li style={{paddingLeft: '10px'}}>Thoroughness of the README file and documentation</li>
-                  </ul>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+                    {/* <li style={{paddingBottom: '10px'}}></li> */}
+                    <li style={{paddingBottom: '10px'}}>Innovation and creativity.</li>
+                    <li style={{paddingBottom: '10px'}}>Design and user experience.</li>
+                    <li style={{paddingBottom: '10px'}}>Functionality and performance.</li>
+                    <li style={{paddingBottom: '10px'}}>Code quality and organization.</li>
+                    <li style={{paddingBottom: '10px'}}>Integration and effective use of the core technologies (Three.js, Next.js, and React Native).</li>
+                    <li style={{paddingBottom: '10px'}}>Responsiveness and compatibility across different devices and platforms.</li>
+                    <li >Thoroughness of the README file and documentation.</li>
+                  </ul> 
                 </p>
-                  {/* <div className="flexNullCenter">
-                    <AddImgWrapp1 className="flexCenter">
-                      <img src={AddImage1} alt="office" />
-                    </AddImgWrapp1>
-                    <AddImgWrapp2>
-                      <img src={AddImage2} alt="office" />
-                    </AddImgWrapp2>
-                  </div>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp3>
-                      <img src={AddImage3} alt="office" />
-                    </AddImgWrapp3>
-                    <AddImgWrapp4>
-                      <img src={AddImage4} alt="office" />
-                    </AddImgWrapp4>
-                  </div> */}
-                {/* </AddRightInner> */}
-              </AddRight>
+                </AddLeft>
+                {/* </div> */}
             </Advertising>
           </div>
         </div>
@@ -169,11 +127,6 @@ const Advertising = styled.div`
     margin: 80px 0 0px 0;
   }
 `;
-const ButtonsRow = styled.div`
-  @media (max-width: 860px) {
-    justify-content: space-between;
-  }
-`;
 const AddLeft = styled.div`
   width: 50%;
   p {
@@ -192,66 +145,8 @@ const AddLeft = styled.div`
     }
   }
 `;
-const AddRight = styled.div`
-  width: 50%;
-  ${'' /* position: absolute; */}
-  ${'' /* top: -70px; */}
-  right: 0;
-  @media (max-width: 860px) {
-    width: 80%;
-    position: relative;
-    order: 1;
-    top: -40px;
-  }
-`;
-const AddRightInner = styled.div`
-  width: 100%;
-`;
-const AddImgWrapp1 = styled.div`
-  width: 48%;
-  margin: 0 6% 10px 6%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp2 = styled.div`
-  width: 30%;
-  margin: 0 5% 10px 5%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp3 = styled.div`
-  width: 20%;
-  margin-left: 40%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp4 = styled.div`
-  width: 30%;
-  margin: 0 5%auto;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
+
+
+
+
+
