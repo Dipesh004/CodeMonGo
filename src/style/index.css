@@ -190,6 +190,9 @@
   .align-prizes{
     text-align: start !important;
   }
+  .registration-button{
+    text-align: center;
+  }
   @media only screen and (max-width: 391px){
     .timer{
       font-size: 30px !important;
@@ -197,6 +200,7 @@
     .r-box{
       height: 200px;
     }
+
   }
   @media only screen and (max-width: 859px) {
     .timer{

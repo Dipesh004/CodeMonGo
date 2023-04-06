@@ -36,12 +36,12 @@ export default function Header() {
             community!
           </HeaderP>
           <p className="font30">Are you ready to take on the challenge?</p>
-          <div className="flexNullCenter">
-            <li className="semiBold font15 pointer flexCenter">
+          <div className="flexNullCenter registration-button">
+            <li className="semiBold font15 pointer flexCenter ">
               <Link
                 to="/registration-form"
                 className="radius8 lightBg nav-btn"
-                style={{ padding: "10px 15px", backgroundColor: '#2C74B3', color: 'white', width :"400px", margin: "20px 0", textAlign: "center"}}
+                style={{ padding: "10px 15px", backgroundColor: '#2C74B3', color: 'white', width :"350px", margin: "20px 0", textAlign: "center"}}
               >
                 Registration
               </Link>
