@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 // Components
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
 import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
+import { Link } from "react-router-dom";
 
 export default function TopNavbar() {
   const [y, setY] = useState(window.scrollY);
@@ -28,7 +29,7 @@ export default function TopNavbar() {
         style={y > 100 ? { height: "60px" } : { height: "80px" }}
       >
         <NavInner className="container flexSpaceCenter">
-          <Link className="pointer flexNullCenter" to="home" smooth={true}>
+          <Link className="pointer flexNullCenter" to="/" smooth={true}>
             <LogoIcon />
           </Link>
           <BurderWrapper
@@ -39,13 +40,13 @@ export default function TopNavbar() {
           </BurderWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer flexCenter">
-              <a
-                href="/"
+              <Link
+                to="/registration-form"
                 className="radius8 lightBg nav-btn"
                 style={{ padding: "10px 15px", backgroundColor: '#2C74B3', color: 'white',}}
               >
                 Registration
-              </a>
+              </Link>
             </li>
           </UlWrapperRight>
         </NavInner>

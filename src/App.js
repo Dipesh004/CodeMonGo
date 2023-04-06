@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet";
 // Screens
 import Landing from "./screens/Landing.jsx";
 import { Route, Routes } from "react-router-dom";
+import Form from "./screens/form/Form.jsx";
+// import { ToastContainer} from 'react-toastify';
 
 export default function App() {
   return (
@@ -16,9 +18,10 @@ export default function App() {
         />
       </Helmet>
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/register" element={<Landing />} />
+        <Route path="/" element={<Landing/>}/>
+        <Route path="/registration-form" element={<Form/>}/>
       </Routes>
+      {/* <Landing /> */}
     </>
   );
 }

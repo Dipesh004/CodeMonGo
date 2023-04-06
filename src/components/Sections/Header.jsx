@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import FullButton from "../Buttons/FullButton";
+// import FullButton from "../Buttons/FullButton";
 // Assets
 import HeaderImage from "../../assets/img/header-img.png";
+// import CountdownTimer from "./CountdownTimer";
+import { FlipDate } from "./CountdownTimer";
+// import FlipDate from "./CountdownTimer";
 // import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
-import { FlipDate } from "./CountdownTimer";
+// import { FlipDate } from "./CountdownTimer";
 
 export default function Header() {
   // const endTime = new Date("2023-05-31T23:59:59.999Z");

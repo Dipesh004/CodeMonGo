@@ -19,7 +19,7 @@ export default function Contact() {
               <LogoImg />
             </Link>
             <StyleP className="whiteColor font13">
-              © {getCurrentYear()} - <span className="purpleColor font13" style={{color: "white"}}>OCPL TECH</span> All Right Reserved
+              © {getCurrentYear()} - <span className="purpleColor font13" style={{color: "white",fontWeight: "800"}}>OCPL TECH</span> All Right Reserved
             </StyleP>
 
             <Link className="whiteColor animate pointer font13" to="home" smooth={true} offset={-80}>
