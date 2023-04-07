@@ -52,10 +52,20 @@ const PaymentDetails = (props) => {
 
   return (
     <Fragment>
-      <img src="https://cdn-icons-png.flaticon.com/512/686/686308.png" alt="Thumbs-up" className="img-fluid mb-3" width={100}/>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/686/686308.png"
+        alt="Thumbs-up"
+        className="img-fluid mb-3"
+        width={100}
+      />
       <h3 className="fw-bold">Thank You for Submitting the Form</h3>
       <h3>Pay the Fees to get registered for the contest</h3>
-      <img src="https://cdn-icons-png.flaticon.com/512/592/592015.png" alt="RupeesIcon" className="img-fluid mt-3" width={100}/>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/592/592015.png"
+        alt="RupeesIcon"
+        className="img-fluid mt-3"
+        width={100}
+      />
       <p className="fs-2 fw-bolder mt-2">Registration Fees Amount: Rs. 176</p>
       <div className="d-flex text-left align-items-center flex-column">
         <p>Click on the Button below to pay:</p>

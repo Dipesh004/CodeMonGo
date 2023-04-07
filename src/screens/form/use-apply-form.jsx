@@ -10,8 +10,8 @@ const defaultValues = {
   email: "",
   dob: "",
   address: "",
-  termsAndConditions:false,
-  marketingEmails:false,
+  termsAndConditions: false,
+  marketingEmails: false,
 };
 const useApplyForm = () => {
   const navigate = useNavigate();
@@ -32,30 +32,32 @@ const useApplyForm = () => {
     methods.handleSubmit((data) => {
       rotateHandler();
       // console.log({ ...data, paymentId });
-      let obj={
-        ...data,paymentId
-      }
+      let obj = {
+        ...data,
+        paymentId,
+      };
+      console.log("object", obj);
       if (isLastStep) {
         fetch("http://91.203.132.23/register", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(obj)
+          body: JSON.stringify(obj),
         })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log(data);
-          navigate("/");
-        })
-        .catch(error => {
-          console.error("Error:", error);
-        });
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            console.log(data);
+            navigate("/");
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
       }
     })();
   };
