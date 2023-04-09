@@ -185,11 +185,12 @@
   .flex-prizes{
     align-items: start !important;
     justify-content: center;
+    /* background: red; */
     /* text-align: start !important; */
   }
-  .align-prizes{
+  /* .align-prizes{
     text-align: start !important;
-  }
+  } */
   .registration-button{
     text-align: center;
   }
@@ -285,7 +286,7 @@
     background-color: #F2B300;
   }
   .lightBg {
-    background-color: #Fff;
+    background-color: #eeeeee;
     color: #205295;
   }
   .coralBg {
@@ -317,9 +318,11 @@
     padding-top: 0 !important;
   }
   .outline-border{
-    border: 2px solid #fff;
-    color: #fff;
-    background-color: transparent;
+    /* border: 2px solid white; */
+    /* color: #fff; */
+    color: #2C74B3;
+    /* background-color: transparent; */
+    background-color: rgb(243, 243, 243);
   }
   .timer{
     font-size: 60px;
@@ -328,5 +331,8 @@
     height: "380px";
     padding:"15px";
     border-radius:"15px";
+  }
+  .up-on-hover:hover {
+    transform: translateY(-10px);
   }
   

@@ -8,10 +8,15 @@ import TestimonialSlider from "../Elements/TestimonialSlider";
 export default function Blog() {
   return (
     <Wrapper id="blog">
-      <div className="lightBg" style={{padding: '50px 0'}}>
+      <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Contest Guideline:</h1>
+            <h1
+              style={{ fontFamily: "Orbitron, sans-serif" }}
+              className="font40 extraBold"
+            >
+              Contest Guidelines:
+            </h1>
           </HeaderInfo>
           <TestimonialSlider />
         </div>

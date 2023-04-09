@@ -13,8 +13,12 @@ const BasicDetails = () => {
   } = useFormContext();
   return (
     <Fragment>
-      <p className="fs-2 fw-bolder ms-4 mb-4 text-center">
-        Fill <span>all de</span>tails
+      <p
+        style={{ marginTop: "10px" }}
+        className="fs-2 fw-bolder ms-4 mb-4 text-center"
+      >
+        {/* Fill <span>all de</span>tails */}
+        <span> Registration Form</span>
       </p>
       <Row>
         <Col lg={6}>

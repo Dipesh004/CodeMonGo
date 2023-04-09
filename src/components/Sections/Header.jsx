@@ -41,7 +41,14 @@ export default function Header() {
               <Link
                 to="/registration-form"
                 className="radius8 lightBg nav-btn"
-                style={{ padding: "10px 15px", backgroundColor: '#2C74B3', color: 'white', width :"350px", margin: "20px 0", textAlign: "center"}}
+                style={{
+                  padding: "10px 15px",
+                  backgroundColor: "#2C74B3",
+                  color: "white",
+                  width: "500px",
+                  margin: "20px 0",
+                  textAlign: "center",
+                }}
               >
                 Registration
               </Link>
@@ -56,12 +63,13 @@ export default function Header() {
       <RightSide>
         <ImageWrapper>
           <Img
-            className="radius8"
+            className="radius8 up-on-hover"
             src={HeaderImage}
             alt="office"
             style={{
               zIndex: 9,
-              boxShadow: "rgb(29, 29, 29, 40%) 0px 0px 16px",
+              boxShadow: "rgb(0, 0, 0, 40%) 0px 0px 16px",
+              transition: "transform 0.2s ease-in-out",
             }}
           />
           <DotsWrapper>
