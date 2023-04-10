@@ -4,17 +4,16 @@ import styled from "styled-components";
 // import FullButton from "../Buttons/FullButton";
 // Assets
 import HeaderImage from "../../assets/img/header-img.png";
-// import CountdownTimer from "./CountdownTimer";
-import { FlipDate } from "./CountdownTimer";
+// import { FlipDate } from "./CountdownTimer";
 // import FlipDate from "./CountdownTimer";
 // import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 import { Link } from "react-router-dom";
+import CountdownTimer from "./CountdownTimer";
 // import { FlipDate } from "./CountdownTimer";
 
 export default function Header() {
-  // const endTime = new Date("2023-05-31T23:59:59.999Z");
-  const endDate = new Date("2023-04-10T23:59:59.999Z");
+  const endDate = new Date("2023-04-30T23:59:59.999Z");
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter" style={{ color: "white" }}>
@@ -37,7 +36,6 @@ export default function Header() {
           </HeaderP>
           <p className="font30">Are you ready to take on the challenge?</p>
           <div className="flexNullCenter registration-button">
-            <li className="semiBold font15 pointer flexCenter ">
               <Link
                 to="/registration-form"
                 className="radius8 lightBg nav-btn"
@@ -45,18 +43,17 @@ export default function Header() {
                   padding: "10px 15px",
                   backgroundColor: "#2C74B3",
                   color: "white",
-                  width: "500px",
+                  width: "100%",
                   margin: "20px 0",
                   textAlign: "center",
                 }}
               >
                 Registration
               </Link>
-            </li>
           </div>
           <h1 className="timer">
-            <FlipDate value={"2023-06-30T11:30:00.999Z"} />
-            {/* <CountdownTimer endDate={endDate} /> */}
+            {/* <FlipDate value={"2023-06-30T11:30:00.999Z"} /> */}
+            <CountdownTimer targetDate={endDate} />
           </h1>
         </div>
       </LeftSide>
