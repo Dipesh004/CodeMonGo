@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 // import { Link } from "react-scroll";
 // Components
+import { Link as ScrollLink } from "react-scroll";
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
@@ -32,6 +33,35 @@ export default function TopNavbar() {
           <Link className="pointer flexNullCenter" to="/" smooth={true}>
             <LogoIcon />
           </Link>
+          <NavTagsWrapper>
+            <div className="d-flex gx-5">
+              <ScrollLink
+                className="pointer flexNullCenter"
+                to="AboutUs"
+                offset={-100}
+                smooth={true}
+                style={{ color: "white" }}
+              >
+                About Us
+              </ScrollLink>
+              <Link
+                className="cursor-pointer flexNullCenter"
+                to="/"
+                smooth={true}
+                style={{ marginLeft: "2rem", color: "white" }}
+              >
+                Pricing Details
+              </Link>
+              <ScrollLink
+                className="pointer flexNullCenter"
+                to="footer"
+                smooth={true}
+                style={{ marginLeft: "2rem", color: "white" }}
+              >
+                Contact Us
+              </ScrollLink>
+            </div>
+          </NavTagsWrapper>
           <BurderWrapper
             className="pointer"
             onClick={() => toggleSidebar(!sidebarOpen)}
@@ -54,6 +84,12 @@ export default function TopNavbar() {
     </>
   );
 }
+const NavTagsWrapper = styled.div`
+  display: block;
+  @media (max-width: 760px) {
+    display: none;
+  }
+`;
 
 const Wrapper = styled.nav`
   width: 100%;

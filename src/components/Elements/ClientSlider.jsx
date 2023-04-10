@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ClientSlider() {
   return (
-    <div>
+    <div id="AboutUs">
       <h1
         className="flex flexCenter font30"
         style={{ fontFamily: "Orbitron, sans-serif", margin: "10px 0 20px 0" }}
