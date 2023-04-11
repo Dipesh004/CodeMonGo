@@ -91,6 +91,6 @@ const LogoWrapper = styled.div`
   cursor: pointer;
   :focus-visible {
     outline: none;
-    border: 0px;
+    border: 0px;   
   }
 `;
