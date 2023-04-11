@@ -5,7 +5,7 @@ import Footer from "./Sections/Footer"
 function Terms() {
   return (
     <>
-      <TopNavbar />
+      <TopNavbar aboutUs='/'/>
       <div
         style={{
           marginTop: "12vh",
@@ -79,7 +79,7 @@ function Terms() {
         </div>
         <div style={{ height: "4vh" }}></div>
       </div>
-      <Footer />
+      <Footer footer='navbar'offset={-500}/>
     </>
   );
 }

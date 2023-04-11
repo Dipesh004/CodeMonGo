@@ -15,7 +15,7 @@ export default function Form() {
     useApplyForm();
   return (
     <>
-      <TopNavbar />
+      <TopNavbar aboutUs='/'/>
       <div style={{height:'100vh'}}>
         <FormProvider {...methods}>
           <div className="cards-wrapper">
@@ -67,7 +67,7 @@ export default function Form() {
           </div>
         </FormProvider>
       </div>
-      <Footer />
+      <Footer footer='navbar' offset={-500}/>
     </>
   );
 }

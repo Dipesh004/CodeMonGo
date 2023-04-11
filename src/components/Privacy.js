@@ -5,7 +5,7 @@ import Footer from "./Sections/Footer"
 function Privacy() {
   return (
     <>
-      <TopNavbar />
+      <TopNavbar aboutUs='/' />
       <div
         style={{
           marginTop: "12vh",
@@ -146,7 +146,7 @@ function Privacy() {
         </p>
         <div style={{ height: "20px" }}></div>
       </div>
-      <Footer />
+      <Footer footer='navbar' offset={-1500}/>
     </>
   );
 }

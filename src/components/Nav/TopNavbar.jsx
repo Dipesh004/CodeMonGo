@@ -10,7 +10,7 @@ import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 import { Link } from "react-router-dom";
 
-export default function TopNavbar() {
+export default function TopNavbar(props) {
   const [y, setY] = useState(window.scrollY);
   const [sidebarOpen, toggleSidebar] = useState(false);
 
@@ -29,12 +29,13 @@ export default function TopNavbar() {
         className="flexCenter animate whiteBg"
         style={y > 100 ? { height: "60px" } : { height: "80px" }}
       >
-        <NavInner className="container flexSpaceCenter">
+        <NavInner className="container flexSpaceCenter" id="navbar">
           <Link className="pointer flexNullCenter" to="/" smooth={true}>
             <LogoIcon />
           </Link>
           <NavTagsWrapper>
             <div className="d-flex gx-5">
+              {props.aboutUs? <Link to="/" style={{color:'white'}}>About Us</Link>:
               <ScrollLink
                 className="pointer flexNullCenter"
                 to="AboutUs"
@@ -43,7 +44,7 @@ export default function TopNavbar() {
                 style={{ color: "white" }}
               >
                 About Us
-              </ScrollLink>
+              </ScrollLink>}
               <Link
                 className="cursor-pointer flexNullCenter"
                 to="/"

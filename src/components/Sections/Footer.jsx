@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Assets
 import LogoImg from "../../assets/svg/Logo";
 
-export default function Contact() {
+export default function Contact(props) {
 
   const getCurrentYear = () => {
     return new Date().getFullYear();
@@ -25,24 +25,27 @@ export default function Contact() {
                 to="home"
                 smooth={true}
                 offset={-80}
-                style={{marginTop:'-25px'}}
+                style={{ marginTop: "-25px" }}
               >
                 <LogoImg />
               </ScrollLink>
               <div style={{ color: "white" }}>
-                <h5 style={{marginBottom:'10px'}}>Legal</h5>
+                <h5 style={{ marginBottom: "10px" }}>Legal</h5>
                 <Link to="/terms" style={{ color: "white", pointer: "cursor" }}>
                   <p>Terms and Conditions</p>
                 </Link>
-                <Link to="/privacy" style={{ color: "white", pointer: "cursor" }}>
+                <Link
+                  to="/privacy"
+                  style={{ color: "white", pointer: "cursor" }}
+                >
                   <p>Privacy Policy</p>
                 </Link>
               </div>
               <ScrollLink
                 className="whiteColor animate pointer "
-                to="home"
+                to={props.footer ? props.footer : "home"}
                 smooth={true}
-                offset={-80}
+                offset={props.offset ? props.offset : -80}
               >
                 <p>Back to top</p>
               </ScrollLink>
