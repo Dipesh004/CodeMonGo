@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Form from "./screens/form/Form.jsx";
 import Terms from "./components/Terms.js";
 import Privacy from "./components/Privacy.js";
+import Refund from "./components/Refund.js";
 // import { ToastContainer} from 'react-toastify';
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/registration-form" element={<Form />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/refund" element={<Refund />} />
       </Routes>
       {/* <Footer /> */}
 
