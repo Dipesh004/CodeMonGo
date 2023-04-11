@@ -10,8 +10,8 @@ function Refund() {
         style={{
           marginTop: "12vh",
           textAlign: "center",
-          color: "white",
-          background: "#2c70b3",
+          background: "white",
+          color: "#2c70b3",
         }}
       >
         <div style={{ height: "20px" }}></div>

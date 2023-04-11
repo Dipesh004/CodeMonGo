@@ -36,31 +36,31 @@ export default function TopNavbar(props) {
           <NavTagsWrapper>
             <div className="d-flex gx-5">
               {props.aboutUs? <Link to="/" style={{color:'white'}}>About Us</Link>:
-              <ScrollLink
+              <a
                 className="pointer flexNullCenter"
-                to="AboutUs"
+                href="#AboutUs"
                 offset={-100}
                 smooth={true}
                 style={{ color: "white" }}
               >
                 About Us
-              </ScrollLink>}
-              <Link
+              </a>}
+              <a
                 className="cursor-pointer flexNullCenter"
-                to="/"
+                href="#pricing"
                 smooth={true}
                 style={{ marginLeft: "2rem", color: "white" }}
               >
                 Pricing Details
-              </Link>
-              <ScrollLink
+              </a>
+              <a
                 className="pointer flexNullCenter"
-                to="footer"
+                href="#footer"
                 smooth={true}
                 style={{ marginLeft: "2rem", color: "white" }}
               >
                 Contact Us
-              </ScrollLink>
+              </a>
             </div>
           </NavTagsWrapper>
           <BurderWrapper

@@ -13,6 +13,7 @@ export default function TestimonialBox({
   text7,
   text8,
   text9,
+  text10
 }) {
   return (
     <Wrapper
@@ -78,6 +79,12 @@ export default function TestimonialBox({
         style={{ paddingBottom: "15px", fontSize: "14px" }}
       >
         {text9}
+      </p>
+      <p
+        className="whiteColor font13"
+        style={{ paddingBottom: "15px", fontSize: "14px" }}
+      >
+        {text10}
       </p>
       {/* <p className="orangeColor font13" style={{alignSelf: 'flex-end'}}>
         <em>{author}</em>
