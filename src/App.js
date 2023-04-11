@@ -2,8 +2,13 @@ import React from "react";
 import { Helmet } from "react-helmet";
 // Screens
 import Landing from "./screens/Landing.jsx";
+import TopNavbar from "./components/Nav/TopNavbar.jsx";
+import Footer from "./components/Sections/Footer.jsx"
 import { Route, Routes } from "react-router-dom";
 import Form from "./screens/form/Form.jsx";
+import Terms from "./components/Terms.js";
+import Privacy from "./components/Privacy.js";
+import Refund from "./components/Refund.js";
 // import { ToastContainer} from 'react-toastify';
 
 export default function App() {
@@ -17,10 +22,16 @@ export default function App() {
           rel="stylesheet"
         />
       </Helmet>
+      {/* <TopNavbar /> */}
       <Routes>
-        <Route path="/" element={<Landing/>}/>
-        <Route path="/registration-form" element={<Form/>}/>
+        <Route path="/" element={<Landing />} />
+        <Route path="/registration-form" element={<Form />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/refund" element={<Refund />} />
       </Routes>
+      {/* <Footer /> */}
+
       {/* <Landing /> */}
     </>
   );

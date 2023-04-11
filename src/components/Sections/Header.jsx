@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import './header.css'
 // Components
 // import FullButton from "../Buttons/FullButton";
 // Assets
@@ -36,20 +37,20 @@ export default function Header() {
           </HeaderP>
           <p className="font30">Are you ready to take on the challenge?</p>
           <div className="flexNullCenter registration-button">
-              <Link
-                to="/registration-form"
-                className="radius8 lightBg nav-btn"
-                style={{
-                  padding: "10px 15px",
-                  backgroundColor: "#2C74B3",
-                  color: "white",
-                  width: "100%",
-                  margin: "20px 0",
-                  textAlign: "center",
-                }}
-              >
-                Registration
-              </Link>
+            <Link
+              to="/registration-form"
+              className="radius8 lightBg gradient-animation nav-btn"
+              style={{
+                padding: "10px 15px",
+                backgroundColor: "#2C74B3",
+                color: "white",
+                width: "100%",
+                margin: "20px 0",
+                textAlign: "center",
+              }}
+            >
+              Registration
+            </Link>
           </div>
           <h1 className="timer">
             {/* <FlipDate value={"2023-06-30T11:30:00.999Z"} /> */}

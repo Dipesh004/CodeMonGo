@@ -1,66 +1,35 @@
 import React from "react";
 import styled from "styled-components";
+import "./index.scss";
 // Assets
 import RollerIcon from "../../assets/svg/Services/RollerIcon";
 import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
 import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
 import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import analysis from "../../assets/svg/100779-file-analysis.json";
 import topPerformer from "../../assets/svg/677-trophy.json";
 import hr from "../../assets/svg/88714-interview.json";
 import offer from "../../assets/svg/63261-phone-charts.json";
 
 export default function ServiceBox({ icon, title, subtitle }) {
-  const defaultOptions1 = {
-    loop: true,
-    autoplay: true,
-    animationData: analysis,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptions2 = {
-    loop: true,
-    autoplay: true,
-    animationData: topPerformer,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptions3 = {
-    loop: true,
-    autoplay: true,
-    animationData: hr,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptions4 = {
-    loop: true,
-    autoplay: true,
-    animationData: offer,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
   let getIcon;
 
   switch (icon) {
     case "vacancy":
-      getIcon = <Lottie options={defaultOptions1} height={65} width={65} />;
+      getIcon = <Lottie className="abc"animationData={analysis} loop={true} autoplay={true}/>;
       break;
     case "top":
-      getIcon = <Lottie options={defaultOptions2} height={65} width={65} />;
+      getIcon = <Lottie animationData={topPerformer} loop={true} autoplay={true} />;
       break;
     case "hire":
-      getIcon = <Lottie options={defaultOptions3} height={65} width={65} />;
+      getIcon = <Lottie animationData={hr} loop={true} autoplay={true} />;
       break;
     case "offer":
-      getIcon = <Lottie options={defaultOptions4} height={65} width={65} />;
+      getIcon = <Lottie animationData={offer} loop={true} autoplay={true} />;
       break;
     default:
-      getIcon = <Lottie options={defaultOptions1} height={65} width={65} />;
+      getIcon = <Lottie animationData={analysis} loop={true} autoplay={true} />;
       break;
   }
 

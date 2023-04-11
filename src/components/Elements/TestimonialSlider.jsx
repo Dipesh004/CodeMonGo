@@ -78,6 +78,7 @@ export default function TestimonialSlider() {
           text7="7. All submissions must be original work and not violate any copyright or intellectual property rights."
           text8="8. Collaborative submissions are allowed, but teams must not exceed four members."
           text9="9.The contest will run for 2 days, starting from the date of the official announcement."
+          text10="10.The Fees of the contest is Rs.176 (Inclusive of all taxes)."
       // author="Ralph Waldo Emerson"
       />
     </div>
@@ -90,6 +91,6 @@ const LogoWrapper = styled.div`
   cursor: pointer;
   :focus-visible {
     outline: none;
-    border: 0px;
+    border: 0px;   
   }
 `;

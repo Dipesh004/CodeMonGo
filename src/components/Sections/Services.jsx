@@ -9,7 +9,7 @@ export default function Services() {
   return (
     <Wrapper>
       <div className="lightBg" style={{ padding: "50px 0" }}>
-        <div className="container">
+        <div className="container" id="aboutUs">
           <ClientSlider />
         </div>
       </div>

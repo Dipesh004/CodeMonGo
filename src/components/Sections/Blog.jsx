@@ -7,7 +7,7 @@ import TestimonialSlider from "../Elements/TestimonialSlider";
 
 export default function Blog() {
   return (
-    <Wrapper id="blog">
+    <Wrapper id="pricing">
       <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
           <HeaderInfo>
